@@ -153,7 +153,25 @@ footer {
 
 		float: none;
 
+		.footer_row1 {
+			text-align: right;
+		}
 
+		.footer_row2 {
+
+			.products, .support, .websites, .group, .contact {
+				@include span(2 of 10);
+			}
+
+			.support > ul, .group > ul {
+				padding-left: 0;
+			}
+
+			.contact {
+				@include prefix(0);
+				text-align: left;
+			}
+		}
 
 
 	}
