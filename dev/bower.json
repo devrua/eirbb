@@ -1,0 +1,21 @@
+{
+  "name": "eirbb",
+  "description": "Strata 3 front-end test exercise - broadband landing page for eir.ie",
+  "main": "index.js",
+  "authors": [
+    "Cathal Boyle"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12"
+  }
+}

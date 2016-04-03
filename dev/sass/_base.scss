@@ -1,0 +1,67 @@
+@import "../bower_components/susy/sass/susy";
+
+/* Media queries */
+
+$tablet: 			"only screen and (min-width: 600px)";
+$desktop: 			"only screen and (min-width: 750px)";
+$large-desktop:		"only screen and (min-width: 1000px)";		
+
+/* Visibility queries */
+
+.mobile 			{ display: inline-block; }
+.mobile-tablet 		{ display: inline-block; }
+.tablet 			{ display: none; }
+.tablet-desktop 	{ display: none; }
+.desktop 			{ display: none; }
+
+
+
+@media #{$tablet} {
+	/* Visibility queries */
+
+	.mobile 			{ display: none; }
+	.mobile-tablet 		{ display: inline-block; }
+	.tablet 			{ display: inline-block; }
+	.tablet-desktop 	{ display: inline-block; }
+	.desktop 			{ display: none; }
+}
+
+
+@media #{$desktop} {
+	/* Visibility queries */
+
+	.mobile 			{ display: none; }
+	.mobile-tablet 		{ display: none; }
+	.tablet 			{ display: none; }
+	.tablet-desktop 	{ display: inline-block; }
+	.desktop 	 		{ display: inline-block; }
+}
+
+
+
+
+
+
+
+
+$susy: (	
+	columns: 12, 
+	gutters: 20/75,
+	gutter-position: split,
+  	global-box-sizing: border-box,
+  	//debug: (image: show-columns)
+);
+
+
+
+.container {
+	margin: 0 10px;
+
+	@media #{$tablet} {
+		@include container(1140px);
+	}
+	
+}
+
+
+

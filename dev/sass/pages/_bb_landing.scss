@@ -1,0 +1,170 @@
+.broadband_landing {
+
+
+
+	h1 {
+		@include clearfix();
+		color: red;
+
+	}
+
+	.testing {
+	  @include span(12);
+	}
+
+	.testing2 {
+	  @include span(2);
+	  margin-left: span(4);
+	}
+
+	.testing3 
+	{  @include span(2);
+	  margin-left: span(6);
+	}
+
+	.col {
+		@include span(1);
+		background-color: cyan;
+		height: 100%;
+
+		&.last {
+			@include span(1 of 12);
+		}
+	}
+
+	.no_grid {
+		@include bleed-x(10px);
+		background-color: green;
+
+		@media #{$tablet} {
+			@include span(12);
+			padding: 0;
+			overflow: hidden;
+		}
+		
+	}
+
+	.large_feature {
+		width: 100%;
+		float: left;
+	}
+
+	.featurebox {
+		@include span(4);
+		background-color: blue;
+		height: 200px;
+	}
+
+	.help_grid {
+		@include clearfix();
+		overflow: hidden;
+	}
+
+	.help_row {
+		overflow: hidden;
+
+		@media #{$tablet} {
+			display: inline;
+		}
+	}
+
+	.help_box {
+		box-sizing: border-box;
+		background-color: $bg-lgrey;
+		border: 10px solid $white;
+		margin-bottom: -99999px;
+	  	padding-bottom: 99999px;
+
+		&.support, &.contact {
+			float: left;
+	    	width: 50%;
+	    	border-left: 0;
+	    	text-align: center;
+
+	    	@media #{$tablet} {
+				border: 0;
+				@include span(3);
+			}
+		}
+
+		&.chat, &.store {
+			float: right;
+			@include clearfix();
+			width: 50%;
+			border-right: 0;
+	    	text-align: center;
+
+	    	@media #{$tablet} {
+				border: 0;
+				@include span(3);
+			}
+		}
+	}
+
+
+
+
+	section.section1 {
+		.cta_banner {
+			width: 140px;
+			background-color: $bg-purple;
+			border-radius: 70px;
+			
+			p {
+				font-family: eir;
+				font-size: 24px;
+				line-height: auto;
+				color: $white;
+				font-weight: normal;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+
+	section.section2 {
+		.container {
+			background-color: $bg-lgrey;
+			text-align: center;
+
+			p {
+				font-size: 20px;
+				line-height: 24px;
+				color: $grey-dark;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+	@media #{$tablet} {
+
+		.large_feature {
+			width: 50%;
+			margin-bottom: -99999px;
+	  		padding-bottom: 99999px;
+
+			&.left {
+				float: left;
+			}
+
+			&.right {
+				float: right;
+			}
+		}
+
+
+	}
+
+
+}
+

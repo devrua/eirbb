@@ -1,0 +1,227 @@
+header {	
+	
+	.mobile_header {
+		display: block;
+		background-color: $bg-dgrey;
+		height: 70px;
+		border-top: 10px solid $black;
+		@include clearfix();
+		position: relative;
+
+		.eir_logo {
+			display: inline-block;
+			@include image("../../img/eir_logo", ".png", 122px, 84px);
+			position: absolute;
+			top: -6px;
+    		left: 7px;
+		}
+
+		.menu_burger_icon {
+			display: inline-block;
+			@include image("../../img/burger_icon", ".png", 30px, 26px);
+			float: right;
+			padding-top: 44px;
+			cursor: pointer;
+		}
+	}
+
+	.desktop_header {
+		display: none;
+	}
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+	@media #{$desktop} {
+
+		.mobile_header {
+			display: none;
+		}
+
+		.desktop_header {
+			display: block;
+		}
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+    		margin: 0;
+
+			li {
+				display: inline-block;
+
+				a {
+					text-decoration: none;
+				}
+			}			
+		}
+
+		.menus_wrap {
+			@include span(12);
+		}
+
+		.nav_row1 {
+			background-color: $black;
+			padding: 12px 0px 11px;
+
+			ul.left_menu {
+				float: left;
+
+				li {
+					padding-right: 43px;
+				}
+			}
+
+			ul.right_menu {
+				float: right;
+
+				li {
+					padding-left: 43px;
+				}
+			}
+
+			a {
+				font-family: $alt-font;
+				font-size: 12px;
+    			line-height: 13px;
+    			font-weight: 200;
+				color: $white;
+				text-transform: lowercase;
+				letter-spacing: 0.02em;
+			}
+		}
+
+		.nav_row2 {
+			background-color: $bg-dgrey;
+			height: 87px;
+
+			.menus_wrap {
+				position: relative;
+			}
+
+			.eir_logo {
+				display: inline-block;
+				@include image("../../img/eir_logo_desk", ".png", 159px, 109px);
+				position: absolute;
+				top: -11px;
+    			left: -3px;
+			}
+
+			ul {
+				text-align: right;
+				padding: 52px 0 0;
+
+				li {
+					margin: 0 1.93%;
+
+					&:first-child {
+						margin-left: 0;
+
+						a { padding-left: 0; }
+					}
+
+					&:last-child {
+						margin-right: 0;
+
+						a { padding-right: 0; }
+					}
+
+					a {
+						font-family: $head-font;
+						font-size: 14px;
+						line-height: 19px;
+						font-weight: 400;
+						color: $white;
+						padding: 0 2px 12px; //for select line
+						margin: 0;
+						
+						&.selected {
+							border-bottom: 5px solid $nav-link;
+						}
+					}
+				}
+			}
+		}
+
+		.subnav {
+			height: 72px;
+
+			ul {
+				text-align: right;
+				padding: 27px 0 0;
+
+				li {
+					margin: 0 3.2%;
+
+					&:first-child {
+						margin-left: 0;
+					}
+
+					&:last-child {
+						margin-right: -1px;
+					}
+
+					a {
+						font-family: $alt-font;
+						font-size: 15px;
+						line-height: 19px;
+						font-weight: 700;
+						color: $grey-dark;						
+						padding: 0 0 20px; //for select line
+						margin: 0;
+						
+						&.selected {
+							color: $nav-link;	
+							border-bottom: 5px solid $nav-link;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// MEDIA QUERIES TO REDUCE MENU SIZES FOR NARROWER SCREENS
+
+	.nav_row2 ul li a {
+
+		@media only screen and (min-width: 860px) {
+			font-size: 16px;
+			line-height: 19px;
+			padding: 0 6px 11px; //for select line
+		}
+
+		@media #{$large-desktop} {
+			font-size: 17px;
+			line-height: 19px;
+			padding: 0 8px 10px; //for select line
+		}
+	}
+
+	.subnav ul li a {
+
+		@media only screen and (min-width: 860px) {
+			font-size: 17px;
+			line-height: 19px;
+			padding: 0 0 18px; //for select line
+		}
+
+		@media #{$large-desktop} {
+			font-size: 18px;
+			line-height: 19px;
+		}
+	}
+}

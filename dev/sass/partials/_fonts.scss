@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Glacial Indifference';
+  src: url('../../fonts/GlacialIndifference-Regular.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('../../fonts/Muli-ExtraLight.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('../../fonts/Muli-Semibold.ttf')  format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700);
+
+
+//There are 
+// GTMedium - Muli Muli-SemiboldGT 
+// GTLight - Muli Muli-ExtraLight
+// GT Regular - GlacialIndifference-Regular
+// Eir(medium) - comfortaa bold
+
+// The values of text elements often do not match their corresponding values in the 
+// psd files as I chose to try and match fonts in appearance rather than strictly copying
+// the properites of the fonts in the psd files.  E.g. 'Comfortaa' with font-size 30px and letter-spacing of
+// 1px is the closest I could get to eir at 28px with no letter-spacing property. 

@@ -1,0 +1,10 @@
+.flexslider {
+	
+	.navcircle {
+		background-color: #D5D9DC;
+
+		&.active {
+			background-color: $nav-link;
+		}
+	}
+}

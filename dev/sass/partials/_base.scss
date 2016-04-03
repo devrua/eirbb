@@ -1,0 +1,14 @@
+@import "../bower_components/susy/sass/susy";
+
+$susy: (	
+	columns: 12, 
+  	container: 70em,
+  	gutters: 0.25,
+  	global-box-sizing: border-box,
+  	//debug: (image: show-columns)
+);
+
+.container {
+	@include container;
+	max-width: 1140px;
+}
