@@ -3,9 +3,13 @@
 	z-index: 1;
 
 	.banner {
+
+		h1 {
+			width: 300px;
+		}
+		
 		.slide {
 			height: 452px;
-			position: relative;
 
 			a.cta_banner {
 				width: 140px;
@@ -14,9 +18,8 @@
 				background-color: $bg-purple;
 				border-radius: 50%;
 				display: table;
-				position: absolute;
-				bottom: -20px;
-				left: 10px;
+				float: left;
+				margin: 164px 0 0 8px;
 
 				span {
 					font-family: Comfortaa,cursive;
@@ -36,10 +39,10 @@
 				@include image('../../img/green_phone_mob', '.jpg', auto, 452px);
 			}
 		}
+	}
 
-		.carousel {
-			display: none;
-		}
+	.carousel {
+		display: none;
 	}
 
 	.testing {
@@ -168,26 +171,43 @@
 
 	@media #{$tablet} {
 
-		.banner > .slide {
-			display: none;
-		}
+		.banner {
 
-		.carousel {
-			display: block;
-
-			.slide1 {
-				@include image('../../img/green_phone_desk', '.jpg', auto, 452px);
+			> .slide {
+				display: none;
 			}
 
-			.slide2 {
-				@include image('../../img/earth_desk', '.jpg', auto, 452px);
+			h1 {
+				padding: 50px 25px;
+				font-size: 41px;
+				line-height: 46px;
+				font-weight: 400;
+				width: 540px;
 			}
 
-			.slide3 {
-				background-color: $bg-dgrey;
-				height: 452px;
-			}	
+			.carousel {
+				display: block;
+
+				.slide { 
+					height: 400px;
+					background-color: $bg-dgrey;
+
+					a.cta_banner {
+						margin: 81px 0 0 11px;
+					}
+				}
+
+				.slide1 {
+					@include image('../../img/green_phone_desk', '.jpg', auto, 400px);
+				}	
+
+				.slide2 {
+					@include image('../../img/earth_desk', '.jpg', auto, 400px);
+				}
+			}
 		}
+
+		
 
 		
 

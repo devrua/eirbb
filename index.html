@@ -73,30 +73,31 @@
 			<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
 			<a href="" class="cta_banner"><span>Learn more</span></a>
 		</div>
-		<div class="carousel flexslider">
-			<ul class="slides">
-				<li>
-					<div class="slide slide1">
-						<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
-						<a href="" class="cta_banner"><span>Learn more</span></a>
-					</div>
-				</li>
-				<li>
-					<div class="slide slide2">
-						<h1>See what you can do with eir broadband!</h1>
-						<a href="" class="cta_banner"><span>Learn more</span></a>
-					</div>
-				</li>
-				<li>
-					<div class="slide slide3">
-						<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
-						<a href="" class="cta_banner"><span>Learn more</span></a>
-					</div>
-				</li>
-			</ul>
+		<div class="container">
+			<div class="carousel flexslider">
+				<ul class="slides">
+					<li>
+						<div class="slide slide1">
+							<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
+							<a href="" class="cta_banner"><span>Learn more</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="slide slide2">
+							<h1>See what you can do with eir broadband!</h1>
+							<a href="" class="cta_banner"><span>Learn more</span></a>
+						</div>
+					</li>
+					<li>
+						<div class="slide slide3">
+							<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
+							<a href="" class="cta_banner"><span>Learn more</span></a>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-
 	
 	<div class="container">
 	</div>
@@ -293,8 +294,39 @@
 <script src="assets/js/jquery.flexslider.js"></script>
 
 <script>
+
+function callSlide() {
 	$( '.flexslider' ).flexslider({
-    });
+   		animation: "slide",
+   		useCSS: true,
+   		touch: true,
+   		pauseOnAction: true,
+   		directionNav: false
+   });
+} 
+
+if ($(window).width() > 600) {
+	callSlide();
+
+   $(window).resize( function () { 
+		if ( $(window).width() < 600 ) {
+			location.reload();
+		}
+
+		// if ( $(window).width() > 620 ) {
+		// 	$( '.flexslider' ).flexslider();
+		// }
+	});
+}
+
+	if ($(window).width() < 600) {
+
+		$(window).resize( function () { 
+			if ( $(window).width() > 599 ) {
+				callSlide();
+			}
+		});
+	}
 </script>
 
 </body>
