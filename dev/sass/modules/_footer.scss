@@ -3,6 +3,8 @@ footer {
 	float: left;
 	font-family: $regular-font;
 	padding: 45px 0 20px;
+	position: relative;
+	z-index: 2;
 
 	ul {
 		list-style-type: none;

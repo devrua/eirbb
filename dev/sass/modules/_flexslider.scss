@@ -1,10 +1,5 @@
-.flexslider {
-	
-	.navcircle {
-		background-color: #D5D9DC;
+// Rules to overwrite the native flexslider styles (located in flexslider.css)
 
-		&.active {
-			background-color: $nav-link;
-		}
-	}
+.flexslider {
+	border: 0;
 }

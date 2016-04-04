@@ -33,7 +33,7 @@ gulp.task('minify-css', function() {
 
 // //Minify JavaScript
 gulp.task('minify-js', function() {
-  gulp.src('./dev/js/**/*.js')
+  gulp.src('./dev/js/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('./assets/js/min'));
 });
@@ -44,7 +44,7 @@ gulp.task('watch', function() {
   // If any file changes, run the sass task
   gulp.watch('./sass/**/*.{scss,sass}', ['sass']);
   gulp.watch('../assets/css/**.css', ['minify-css']);
-  gulp.watch('./js/**.js', ['minify-js']);
+  gulp.watch('./dev/js/**.js', ['minify-js']);
 });
 
 // Creating a default task

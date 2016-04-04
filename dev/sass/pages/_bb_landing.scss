@@ -1,11 +1,45 @@
 .broadband_landing {
+	position: relative;
+	z-index: 1;
 
+	.banner {
+		.slide {
+			height: 452px;
+			position: relative;
 
+			a.cta_banner {
+				width: 140px;
+				height: 140px;
+				text-decoration: none;
+				background-color: $bg-purple;
+				border-radius: 50%;
+				display: table;
+				position: absolute;
+				bottom: -20px;
+				left: 10px;
 
-	h1 {
-		@include clearfix();
-		color: red;
+				span {
+					font-family: Comfortaa,cursive;
+					font-size: 21px;
+					line-height: 24px;
+					font-weight: 400;
+					color: #FFF;
+					vertical-align: middle;
+					padding: 0 25%;
+					text-align: center;
+					text-decoration: none;
+					display: table-cell;
+				}
+			}
 
+			&.slide1 {
+				@include image('../../img/green_phone_mob', '.jpg', auto, 452px);
+			}
+		}
+
+		.carousel {
+			display: none;
+		}
 	}
 
 	.testing {
@@ -105,21 +139,7 @@
 
 
 	section.section1 {
-		.cta_banner {
-			width: 140px;
-			background-color: $bg-purple;
-			border-radius: 70px;
-			
-			p {
-				font-family: eir;
-				font-size: 24px;
-				line-height: auto;
-				color: $white;
-				font-weight: normal;
-				padding: 0;
-				margin: 0;
-			}
-		}
+		
 	}
 
 	section.section2 {
@@ -147,6 +167,29 @@
 
 
 	@media #{$tablet} {
+
+		.banner > .slide {
+			display: none;
+		}
+
+		.carousel {
+			display: block;
+
+			.slide1 {
+				@include image('../../img/green_phone_desk', '.jpg', auto, 452px);
+			}
+
+			.slide2 {
+				@include image('../../img/earth_desk', '.jpg', auto, 452px);
+			}
+
+			.slide3 {
+				background-color: $bg-dgrey;
+				height: 452px;
+			}	
+		}
+
+		
 
 		.large_feature {
 			width: 50%;

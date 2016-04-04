@@ -7,7 +7,11 @@
   <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
   <title>eir broadband</title>
   <link rel="stylesheet" href="assets/css/min/normalize.css">
+  <link rel="stylesheet" href="assets/css/min/flexslider.css">
   <link rel="stylesheet" href="assets/css/min/screen.css">
+
+  <script> document.createElement( "picture" ); </script>
+  <script src="assets/js/picturefill.js" async></script>
 </head>
 
 <body>
@@ -64,6 +68,38 @@
 	</header>
 
 <div class="broadband_landing">
+	<div class="banner">
+		<div class="slide slide1">
+			<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
+			<a href="" class="cta_banner"><span>Learn more</span></a>
+		</div>
+		<div class="carousel flexslider">
+			<ul class="slides">
+				<li>
+					<div class="slide slide1">
+						<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
+						<a href="" class="cta_banner"><span>Learn more</span></a>
+					</div>
+				</li>
+				<li>
+					<div class="slide slide2">
+						<h1>See what you can do with eir broadband!</h1>
+						<a href="" class="cta_banner"><span>Learn more</span></a>
+					</div>
+				</li>
+				<li>
+					<div class="slide slide3">
+						<h1>Be the first to get Ireland’s FASTEST broadband!</h1>
+						<a href="" class="cta_banner"><span>Learn more</span></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	
+	<div class="container">
+	</div>
 
 <h1>Be the first to get Ireland’s FASTEST broadband!</h1>
 <h2>Why join eir?</h2>
@@ -245,13 +281,21 @@
 			</ul>
 		</div>
 		<div class="footer_row5">
-			<p class="company_info">
+			<p class="company_info">	
 				eircom Limited, Registered as a Branch in Ireland Number 907674, Incorporated in Jersey Number 116389. Branch Address: 1 Heuston South Quarter, St. John's Road, Dublin 8, Ireland. 
 			</p>
 		</div>
 	</div>
 
 </footer>
+
+<script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
+<script src="assets/js/jquery.flexslider.js"></script>
+
+<script>
+	$( '.flexslider' ).flexslider({
+    });
+</script>
 
 </body>
 </html>
