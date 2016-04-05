@@ -24,8 +24,8 @@ $dot-width:				10px;
 $dot-height:			10px;
 $dot-rounded:			30px;
 $dot-margin: 			5px 7px;
-$dot-background:		$color-gray;
-$dot-background-active:	$color-base;
+$dot-background:		$nav-inactive;
+$dot-background-active:	$nav-link;
 
 @import 'mixins';
 @import 'theme';

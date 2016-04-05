@@ -19,7 +19,7 @@
     	background-color: $nav-inactive;
     	box-shadow: 0 0 0 transparent;
     	
-    	&.flex-active {
+    	&.flex-active, &:hover {
     		background-color: $nav-link;
     	}
     }

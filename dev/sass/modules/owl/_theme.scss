@@ -2,7 +2,11 @@
 .owl-theme {
 	// Styling Next and Prev buttons
 	.owl-nav {
-		margin-top: 10px;
+		margin-top: 26px;
+		@media #{$tablet} {
+			margin-top: 56px;
+		}
+
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 		
