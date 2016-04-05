@@ -148,6 +148,11 @@
 		@include clearfix();
 		background-color: $white;
 		overflow: hidden;
+		padding: 9px 0 44px;
+
+		h3 {
+			padding-bottom: 4px;
+		}
 
 		.help_row {
 			overflow: hidden;
@@ -166,7 +171,7 @@
 		box-sizing: border-box;
 		background-color: $bg-lgrey;
 		margin-bottom: -99999px;
-	  	padding: 19px 5px 99999px;
+	  	padding: 19px 2.5% 99999px;
 
 	  	.title {
 	  		font-size: 21px;
@@ -174,6 +179,8 @@
 	  		color: $grey-dark;
     		padding: 7px 0 30px;
 	  	}
+
+	  	p { display: none; }
 
 		&.support, &.contact {
 			float: left;
@@ -313,11 +320,27 @@
 			}
 		}
 
+		.help_grid {
+			padding: 31px 0 59px;
+			position: relative;
+
+			h3 {
+				padding-bottom: 53px;
+			}
+
+			&:after {
+				background-color: $white;
+				height: 59px;
+			}
+		}
+
 		.help_box {
 			&.support, &.contact, &.chat, &.store {
 				border: 0;
 				@include span(3);
+				@include gutters(10px inside);
 			}
+
 		}
 
 	}
@@ -328,13 +351,9 @@
 
 
 
-	@media #{$desktop} {
+	@media #{$large-desktop} {
 
 		.help_box {
-			box-sizing: border-box;
-			background-color: $bg-lgrey;
-			margin-bottom: -99999px;
-		  	padding: 19px 2.5% 99999px;
 
 		  	.title {
 		  		padding: 7px 0 0px;
@@ -343,6 +362,7 @@
 		  	}
 
 		  	p {
+		  		display: inline-block;
 		  		font-size: 20px;
 			    line-height: 27px;
 			    color: #grey-dark;
