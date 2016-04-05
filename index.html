@@ -8,6 +8,7 @@
   <title>eir broadband</title>
   <link rel="stylesheet" href="assets/css/min/normalize.css">
   <link rel="stylesheet" href="assets/css/min/flexslider.css">
+<!--   <link rel="stylesheet" href="assets/css/min/owl.carousel.css"> -->
   <link rel="stylesheet" href="assets/css/min/screen.css">
 
   <script> document.createElement( "picture" ); </script>
@@ -99,8 +100,9 @@
 		</div>
 	</div>
 
-	<div class="container" style="height: 400px;">
+	<div class="container">
 		<h3>New customers get unlimited eFibre for just €30 a month</h3>
+		<p class="sub">Our best deals are</br>always online.</p>
 		<div class="feature_row no_grid">
 			<div class="triple_feature feature1">
 				<img src="assets/img/router_icon.svg" alt="router modem graphic"/>
@@ -118,8 +120,7 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="container">
+	<!-- <div class="container">
 		<div class="no_grid">
 			<div class="testbleed">
 				<p>la la la</p>
@@ -131,6 +132,50 @@
 				<p>la la la</p>
 			</div>
 		</div>
+	</div> -->
+
+<div class="container">
+	<div class="testimonials_wrap">
+		<h3>What our customer's think</h3>
+		<div class="owl-carousel">
+			<div class="testimonial">
+				<img src="assets/img/cust1.jpg" alt="Customer 1 portrait" /> 
+				<p class="customer_quote">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”
+				</p>
+				<p class="customer_name_location">
+					Sarah Smith</br>Dublin
+				</p>
+			</div>
+			<div class="testimonial">
+				<img src="assets/img/cust1.jpg" alt="Customer 1 portrait" /> 
+				<p class="customer_quote">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”
+				</p>
+				<p class="customer_name_location">
+					Sarah Smith</br>Dublin
+				</p>
+			</div>
+			<div class="testimonial">
+				<img src="assets/img/cust1.jpg" alt="Customer 1 portrait" /> 
+				<p class="customer_quote">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”
+				</p>
+				<p class="customer_name_location">
+					Sarah Smith</br>Dublin
+				</p>
+			</div>
+			<div class="testimonial">
+				<img src="assets/img/cust1.jpg" alt="Customer 1 portrait" /> 
+				<p class="customer_quote">
+					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”
+				</p>
+				<p class="customer_name_location">
+					Sarah Smith</br>Dublin
+				</p>
+			</div>
+		</div>
+
 	</div>
 
 <h1>Be the first to get Ireland’s FASTEST broadband!</h1>
@@ -309,6 +354,7 @@
 
 <script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script>
 <script src="assets/js/jquery.flexslider.js"></script>
+<script src="assets/js/min/owl.carousel.min.js"></script>
 
 <script>
 
@@ -344,6 +390,29 @@ if ($(window).width() > 600) {
 			}
 		});
 	}
+
+	$(document).ready(function(){
+ 	 	$(".owl-carousel").owlCarousel({
+ 	 		responsiveClass:true,
+	 		    responsive:{
+	 		        0:{
+	 		            items:1,
+	 		            dots:true,
+	 		            loop: true
+	 		        },
+	 		        600:{
+	 		            items:2,
+	 		            dots:true,
+	 		            loop: true
+	 		        },
+	 		        1000:{
+	 		            items:3,
+	 		            dots:true,
+	 		            loop: true
+	 		        }
+	 		    }
+ 	 	});
+	});
 </script>
 
 </body>

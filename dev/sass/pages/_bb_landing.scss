@@ -42,6 +42,15 @@
 		}
 	}
 
+	.banner + .container {
+		@include clearfix();
+
+		h3 {
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
 	.carousel {
 		display: none;
 	}
@@ -72,7 +81,7 @@
 
 	.no_grid {
 		@include bleed-x(10px);
-		background-color: green;
+		float: left;
 
 		@media #{$tablet} {
 			@include span(12);
@@ -87,15 +96,57 @@
 		float: left;
 	}
 
+	p.sub {
+		text-align: center;
+		font-size: 20px;
+		line-height: 24px;
+		padding-bottom: 25px;
+	}
+
 	.triple_feature {
 		background-color: $white;
-		border-bottom: 5px dotted $bg-lgrey;
+		border-bottom: 4px dotted $bg-lgrey;
+    	border-bottom-style: dotted;
+    	padding: 25px 0;
+    	text-align: center;
+    	box-sizing: border-box;
 	}
 
 	.featurebox {
 		@include span(4);
 		background-color: blue;
 		height: 200px;
+	}
+
+	.testimonials_wrap {
+		background-color: $white;
+
+		.testimonial {
+			text-align: center;
+			padding: 0px 27px;
+
+			img {
+				width: 100px;
+				margin: 0px auto;
+    			border-radius: 50%;
+			}
+
+			p {
+				text-align: center;
+				padding: 20px 0;
+				font-size: 20px;
+				color: $grey-quote;
+
+				&.customer_name_location {
+					font-size: 12px;
+    				line-height: 21px;
+    				font-weight: 700;
+    				font-family: Muli;
+    				padding: 0;
+				}
+			}
+
+		}
 	}
 
 	.help_grid {
