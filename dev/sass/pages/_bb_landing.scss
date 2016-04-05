@@ -44,6 +44,7 @@
 
 	.banner + .container {
 		@include clearfix();
+		width: auto;
 
 		h3 {
 			font-size: 24px;
@@ -80,18 +81,6 @@
 		}
 	}
 
-	.no_grid {
-		@include bleed-x(10px);
-		float: left;
-
-		@media #{$tablet} {
-			@include span(12);
-			padding: 0;
-			overflow: hidden;
-		}
-		
-	}
-
 	.large_feature, .triple_feature {
 		width: 100%;
 		float: left;
@@ -120,7 +109,7 @@
 	}
 
 	.testimonials_wrap {
-		background-color: $white;
+		background-color: red;
 		padding: 60px 0 39px;
 
 		h3 {
@@ -157,28 +146,38 @@
 
 	.help_grid {
 		@include clearfix();
-		overflow: hidden;
-	}
-
-	.help_row {
+		background-color: $white;
 		overflow: hidden;
 
-		@media #{$tablet} {
-			display: inline;
+		.help_row {
+			overflow: hidden;
+			background: $white;
+			margin: 20px 0;
+
+			@media #{$tablet} {
+				display: inline;
+			}
 		}
 	}
+
+	
 
 	.help_box {
 		box-sizing: border-box;
 		background-color: $bg-lgrey;
-		border: 10px solid $white;
 		margin-bottom: -99999px;
-	  	padding-bottom: 99999px;
+	  	padding: 19px 5px 99999px;
+
+	  	.title {
+	  		font-size: 21px;
+    		padding: 7px 0 30px;
+	  	}
 
 		&.support, &.contact {
 			float: left;
 	    	width: 50%;
 	    	border-left: 0;
+	    	border-right: 10px solid $white;
 	    	text-align: center;
 
 	    	@media #{$tablet} {
@@ -192,6 +191,7 @@
 			@include clearfix();
 			width: 50%;
 			border-right: 0;
+			border-left: 10px solid $white;
 	    	text-align: center;
 
 	    	@media #{$tablet} {
@@ -221,7 +221,20 @@
 		}
 	}
 
+	.no_grid {
+		@include bleed-x(10px);
 
+		@media #{$tablet} {
+			padding: 0;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		
+	}
+
+	.clear {
+		@include clearfix();
+	}
 
 
 

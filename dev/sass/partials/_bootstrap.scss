@@ -45,6 +45,12 @@ h4 {
 	margin: 0;	
 }
 
+*, body {
+	font-family: $regular-font;
+	font-size: 18px;
+	line-height: 24px;
+	color: $grey-light;
+}
 
 p {
 	font-family: $regular-font;
@@ -64,6 +70,14 @@ a {
 	word-spacing: -1px;
 	color: $link;
 	text-decoration: underline
+}
+
+@media #{$tablet} {
+
+	h3 {
+		font-size: 32px;
+	}
+
 }
 
 
