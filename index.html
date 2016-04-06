@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0,  minimum-scale=1.0, maximum-scale=1.0">
-  <title>eir broadband</title>
-  <link rel="stylesheet" href="assets/css/min/normalize.css">
-  <link rel="stylesheet" href="assets/css/min/flexslider.css">
-  <link rel="stylesheet" href="assets/css/min/screen.css">
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  	<title>eir broadband</title>
+  	<link rel="stylesheet" href="assets/css/min/normalize.css">
+  	<link rel="stylesheet" href="assets/css/min/flexslider.css">
+  	<link rel="stylesheet" href="assets/css/min/screen.css">
 </head>
 
 <body>
@@ -221,7 +221,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container pad_after">
+	<div class="container pseudo_pad">
 		<div class="help_grid no_grid">
 			<h3>Need some help?</h3>
 			<div class="help_row">
@@ -358,55 +358,56 @@
 <script src="assets/js/min/owl.carousel.min.js"></script>
 
 <script>
+	$(document).ready(function(){
 
-function callSlide() {
-	$( '.flexslider' ).flexslider({
-   		animation: "slide",
-   		useCSS: true,
-   		touch: true,
-   		pauseOnAction: true,
-   		directionNav: false
-   });
-} 
+		//Banner flexslider call function
+		function callSlide() {
+			$( '.flexslider' ).flexslider({
+		   		animation: "slide",
+		   		useCSS: true,
+		   		touch: true,
+		   		pauseOnAction: true,
+		   		directionNav: false
+		   });
+		} 
 
-if ($(window).width() > 600) {
-	callSlide();
+		//Only called if greater than 600px window
+		//If resized below 600px, page reloads and there is not slider
+		if ($(window).width() > 600) {
+			callSlide();
 
-   $(window).resize( function () { 
-		if ( $(window).width() < 600 ) {
-			location.reload();
+		   $(window).resize( function () { 
+				if ( $(window).width() < 600 ) {
+					location.reload();
+				}
+			});
 		}
 
-		// if ( $(window).width() > 620 ) {
-		// 	$( '.flexslider' ).flexslider();
-		// }
+		//Slider called if move from below to above 600px
+		if ($(window).width() < 600) {
+			$(window).resize( function () { 
+				if ( $(window).width() > 599 ) {
+					callSlide();
+				}
+			});
+		}
+
+		//Owl slider call
+	 	$(".owl-carousel").owlCarousel({
+	 		responsiveClass:true,
+			    responsive:{
+			        0:{
+			            items:1,
+			            dots:true
+			        },
+			        600:{
+			            items:2,
+			            dots:true
+			        },
+			    }
+	 	});
 	});
-}
 
-	if ($(window).width() < 600) {
-
-		$(window).resize( function () { 
-			if ( $(window).width() > 599 ) {
-				callSlide();
-			}
-		});
-	}
-
-	$(document).ready(function(){
- 	 	$(".owl-carousel").owlCarousel({
- 	 		responsiveClass:true,
-	 		    responsive:{
-	 		        0:{
-	 		            items:1,
-	 		            dots:true
-	 		        },
-	 		        600:{
-	 		            items:2,
-	 		            dots:true
-	 		        },
-	 		    }
- 	 	});
-	});
 </script>
 
 </body>

@@ -57,37 +57,6 @@
 		display: none;
 	}
 
-	.large_feature, .triple_feature {
-		width: 100%;
-		float: left;
-	}
-
-	.feature_row {
-		padding: 20px 0;
-		box-sizing: border-box;
-
-	}	
-
-	.large_feature {
-		padding: 30px;
-		box-sizing: border-box;
-
-		* { text-align: left; }
-
-		&.left {
-			background-color: $white;
-		}
-
-		&.right {
-			background-color: $bg-dgrey;
-
-			* {
-				color: $white;
-			}
-		}
-	}
-
-
 	p.sub {
 		text-align: center;
 		font-size: 20px;
@@ -172,6 +141,36 @@
 		overflow: hidden;	
 	}
 
+	.large_feature, .triple_feature {
+		width: 100%;
+		float: left;
+	}
+
+	.feature_row {
+		padding: 20px 0;
+		box-sizing: border-box;
+
+	}	
+
+	.large_feature {
+		padding: 30px;
+		box-sizing: border-box;
+
+		* { text-align: left; }
+
+		&.left {
+			background-color: $white;
+		}
+
+		&.right {
+			background-color: $bg-dgrey;
+
+			* {
+				color: $white;
+			}
+		}
+	}
+
 	.featurebox {
 		background-color: $white;
 		margin: 25px 0 0 0;
@@ -209,8 +208,6 @@
 
 		}
 	}
-
-	
 
 	.testimonials_wrap {
 		background-color: $white;
@@ -269,8 +266,6 @@
 		}
 	}
 
-	
-
 	.help_box {
 		box-sizing: border-box;
 		background-color: $bg-lgrey;
@@ -304,26 +299,6 @@
 		}
 	}
 
-
-
-
-	section.section1 {
-		
-	}
-
-	section.section2 {
-		.container {
-			background-color: $bg-lgrey;
-			text-align: center;
-
-			p {
-				font-size: 20px;
-				line-height: 24px;
-				color: $grey-dark;
-			}
-		}
-	}
-
 	.container {
 		background: $bg-lgrey;
 	}
@@ -346,13 +321,6 @@
 			width: auto;
 		}
 	}
-
-
-
-
-
-
-
 
 
 
@@ -409,6 +377,11 @@
 			}
 		}
 
+		.feature_row {
+			overflow: hidden;
+			@include span(12);
+		}
+
 		.triple_feature_row {
 			@include span(12);
 			display: table;
@@ -445,15 +418,6 @@
 				}
 			}
 		}
-
-		.feature_row {
-			overflow: hidden;
-			@include span(12);
-		}
-
-		
-
-		
 
 		.large_feature {
 			width: 50%;
@@ -494,8 +458,6 @@
 			@include span(4);
 		}
 
-		
-
 		.testimonials_wrap {
 			padding: 33px 0 31px;
 
@@ -524,7 +486,7 @@
 
 		}
 
-		.pad_after {
+		.pseudo_pad {
 			position: relative;
 
 			&:before {
@@ -540,8 +502,6 @@
 		}
 
 	}
-
-
 
 
 
