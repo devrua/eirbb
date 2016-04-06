@@ -109,6 +109,7 @@
 	}
 
 	.featurebox {
+		background-color: $white;
 		margin: 25px 0 0 0;
 		
 		.image_wrap {
@@ -120,7 +121,6 @@
 			img {
 				width: 100%;
 				height: auto;
-				overflow: hidden;
 				margin-left: -50%;
 				position: relative;
 				top: 50%;
@@ -130,17 +130,16 @@
 		}
 
 		.text {
-			background-color: $white;
-			font-family: $alt-font;
+			font-family: $head-font;
 			font-size: 27px;
-			line-height: 35px;
+			line-height: 38px;
 			font-weight: 700;
 			color: $grey-dark;
-			padding: 22px 20px 32px;
+			padding: 22px 20px 33px;
 			
 
 			a {	
-				padding-top: 19px;
+				padding-top: 13px;
 				display: block;
 			}
 
@@ -376,8 +375,28 @@
 			margin-bottom: -99999px;
 			padding-bottom: 99999px;
 
+			.image_wrap {
+				height: 238px;
+
+				img {
+					width: 380px;
+					margin-left: -190px;
+				}
+			}
+
+			.text {
+				padding-bottom: 43px;
+
+				span {
+					display: inline-block;
+					min-height: 109px;
+				}
+			}
+
 			@include span(4);
 		}
+
+		
 
 		.testimonials_wrap {
 			padding: 33px 0 31px;
@@ -423,16 +442,6 @@
 		}
 
 	}
-
-
-
-
-
-
-
-
-
-
 
 
 
