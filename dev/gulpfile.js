@@ -3,8 +3,6 @@ var sass          = require('gulp-sass');
 var sourcemaps    = require('gulp-sourcemaps');
 var cleanCSS      = require('gulp-clean-css');
 var uglify        = require('gulp-uglify');
-// var autoprefixer  = require('gulp-autoprefixer');
-// var concat        = require('gulp-concat');
 
 // Gulp Sass Task 
 gulp.task('sass', function() {
@@ -18,11 +16,6 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('../assets/css'));
 });
-
-// //CSS browser prefixes
-// gulp.task('prefix-css', function() {
-
-// });
 
 // //Minify CSS
 gulp.task('minify-css', function() {
@@ -38,10 +31,8 @@ gulp.task('minify-js', function() {
     .pipe(gulp.dest('./assets/js/min'));
 });
 
-// Watch scss folder for changes
+// Watch sass folder for changes
 gulp.task('watch', function() {
-  // Watches the sass folder for all .scss and .sass files
-  // If any file changes, run the sass task
   gulp.watch('./sass/**/*.{scss,sass}', ['sass']);
   gulp.watch('../assets/css/**.css', ['minify-css']);
   gulp.watch('./dev/js/**.js', ['minify-js']);
